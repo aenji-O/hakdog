@@ -1,0 +1,464 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --primary-color: rgb(0, 172, 0);        /* Your bright green for accents */
+    --secondary-color: white;               /* Pure white background */
+    --text-color: #064e3b;                  /* Your deep green for headings */
+    --text-muted: #4b6354;                  /* A softer version for paragraphs */
+    --border-color: rgba(0, 170, 0, 0.2);   /* Softened your border color for elegance */
+    --background-card-color: #f0fdf4;       /* Your soft mint background */
+    --button-color: rgb(28, 105, 63);       /* Your solid action green */
+}
+
+.grid-container{
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto ;
+}
+
+/* NAVIGATION BAR */
+header{
+    padding: 1rem 1.2rem;
+    background-color: var(--secondary-color);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+/* NAVIGATION LOGO */
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.logo a{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 3.9rem;
+    height: 3.9rem;
+    font-size: 1.4rem;
+}
+
+.logo h3{
+    color: var(--text-color);
+}
+
+/* NAVIGATION LINKS */
+.nav-links{
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+
+}
+.nav-links li{
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.nav-links li a:hover {
+    transform: scale(1.1);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* NAVIGATION SEARCH */
+.search-bar{
+    display: flex;
+    margin-top: -0.7rem;
+}
+
+.search-bar input{
+    flex: 1;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-bar input:focus{
+    border-color: var(--primary-color);
+}
+
+.search-bar button{
+    border-radius: 0 20px 20px 0;
+    padding: 0.6rem 0.7rem;
+    border: none;
+    background-color: var(--button-color);
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.search-bar button img{
+    width: 1.1rem;
+    height: 1.1rem;
+    display: block;
+}
+
+
+/* MAIN CONTENT */
+.main-content{
+    padding: 2rem 2rem;
+}
+
+.hero-page{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    min-height: 80vh;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    background-color: var(--background-card-color);
+}
+
+/* LEFT SIDE PART */
+.hero-content{
+    padding-right: 2rem;
+}
+
+.hero-content .badge{
+    color: var(--primary-color);
+    background: #dcfce7;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.hero-content h1{
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin: 1.5rem 0;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
+    color: var(--text-color);
+    margin: 1.5rem 0;
+}
+
+.hero-content p {
+    color: #374151;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+/* HERO IMAGE */
+.hero-img-box img{
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+
+/* HERO BUTTONS */
+.hero-buttons{
+    display: flex;
+    gap: 1.7rem;
+}
+
+.btn-primary, .btn-outline{
+    padding: 1rem 2rem;
+    
+}
+
+.btn-primary{
+    background-color: var(--button-color);
+    border: none;
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 2px solid var(--button-color);
+    color: var(--button-color);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* SERVICES */
+.services-container{
+    padding: 6rem 1rem;
+    text-align: center;
+}
+
+.services-container h3{
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+.services-header h2 {
+    font-size: 3rem;
+    color: var(--text-color);
+    margin: 1rem 0 4rem;
+}
+
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.service-card {
+    background-color: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    text-align: left;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    background-color: var(--background-card-color);
+}
+
+/* SERVICE IMAGE */
+.service-img {
+    width: 100%;
+    height: 13.75rem;
+    border-radius: 20px;
+    background: var(--background-card-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+.service-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ABOUT US & CONTACT SECTIONS */
+.about-and-contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us, .contact-us {
+    background-color: var(--background-card-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+.about-us h2, .contact-us h2 {
+
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: clamp(0.5rem, 5vw, 2rem);
+    line-height: 1.2;
+}
+
+.about-us p, .contact-us p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    font-size: clamp(0.5rem, 5vw, 1rem);
+    line-height: 1.2;
+}
+
+.contact-info p {
+    margin: 0.6rem 0;
+    font-size: clamp(0.5rem, 5vw, 1rem);
+    line-height: 1.2;
+}
+
+footer {
+    background-color: var(--button-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0.4rem 0;
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+
+/* --- 1. TABLET VIEW (Apply first) --- */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .navbar {
+        gap: 1rem;
+    }
+
+    .about-and-contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 4rem 1.5rem;
+    }
+}
+
+/* --- 2. MOBILE LANDSCAPE/LARGE PHONES --- */
+@media (max-width: 768px) {
+
+    /* Top bar layout */
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    /* Hamburger on the far right */
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+    /* Hide desktop nav by default */
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-color);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.2rem;
+        padding: 1.5rem;
+        display: none;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    /* Search bar at the bottom */
+    .mobile-search {
+        margin-top: 1rem;
+    }
+
+    .mobile-search .search-bar {
+        width: 100%;
+    }
+
+    .hero-page {
+        grid-template-columns: 1fr;
+        text-align: center;
+        min-height: auto;
+        padding: 3rem 1.5rem;
+    }
+
+    .hero-content {
+        padding-right: 0;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-img-box {
+        margin-bottom: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}
+
+/* --- 3. SMALL PHONES (Apply last) --- */
+@media (max-width: 480px) {
+    .navbar {
+        
+        gap: 1.5rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .btn-primary, .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .service-img {
+        height: 11rem; 
+    }
+
+    .about-us h2, .contact-us h2 {
+        font-size: 2rem;
+    }
+
+    .about-us p, .contact-us p {
+        font-size: 0.95rem;
+    }
+}

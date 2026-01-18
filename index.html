@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HUKBALAHAP PHARMACY WEBSITE</title>
+</head>
+
+<body>
+
+    <main class="grid-container">
+
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#"><img src="photos/logo.png" alt="Cureiosity Clinic Logo"></a>
+                    <h3>Cureiosity Clinic</h3>
+                </div>
+
+                <!-- Hamburger -->
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+
+                    <!-- Search bar inside menu -->
+                    <li class="mobile-search">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search medicines..." name="search">
+                            <button type="submit">
+                                <img src="photos/search (2).png" alt="Search Icon">
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+
+                <!-- <div class="search-bar">
+                    <input type="text" placeholder="Search medicines..." name="search">
+                    <button type="submit">
+                        <img src="photos/search (2).png" alt="Search Icon">
+                    </button>
+                </div> -->
+            </nav>
+        </header>
+
+        <section class="main-content" id="home">
+
+            <!-- HERO PAGE PART -->
+            <div class="hero-page">
+                <div class="hero-content">
+                    <span class="badge">Trusted by 20k Customers</span>
+                    <h1>Your Reliable Partner for your Medical Health</h1>
+                    <p>We provide high-quality medicine and professional healthcare services to ensure your family's
+                        well-being is always protected.</p>
+
+                    <div class="hero-buttons">
+                        <a href="#" class="btn-primary">Shop Now</a>
+                        <a href="#" class="btn-outline">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="hero-img-box">
+                    <img src="photos/hero.jpg" alt="Pharmacist at work">
+                </div>
+            </div>
+
+
+            <!-- SERVICES -->
+            <div class="services-container" id="services">
+                <div class="services-header">
+                    <h3>Our Services</h3>
+                    <h2>What We Provide For Your Health</h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="photos/medicine.jpg" alt="Icon">
+                        </div>
+
+                        <h3>Authentic Medicines</h3>
+                        <p>We provide 100% genuine medicines directly from trusted manufacturers.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="photos/delivery.jpg" alt="Icon">
+                        </div>
+                        <h3>Home Delivery</h3>
+                        <p>Fast and reliable delivery service right to your doorstep within 24 hours.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-img">
+                            <img src="photos/consultation.jpg" alt="Icon">
+                        </div>
+                        <h3>Doctor Consultation</h3>
+                        <p>Speak with professional medical consultants for expert advice and prescriptions.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="about-us" id="about">
+                <h2>About Us</h2>
+                <p>
+                    Cureiosity Clinic is a trusted pharmacy and healthcare partner dedicated to providing
+                    safe, effective, and affordable medical solutions. We believe that quality healthcare
+                    should be accessible to everyone.
+                </p>
+                <p>
+                    With licensed pharmacists, authentic medicines, and reliable services, our mission is
+                    to support your health journey with care, professionalism, and compassion.
+                </p>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="contact-us" id="contact">
+                <h2>Contact Us</h2>
+                <p>Have questions or need assistance? We've got you</p>
+
+                <div class="contact-info">
+                    <p><strong>Address:</strong> 123 Health Street, Wellness City</p>
+                    <p><strong>Phone:</strong> +63 912 345 6789</p>
+                    <p><strong>Email:</strong> support@cureiosityclinic.com</p>
+                    <p><strong>Hours:</strong> Mon - Sun | 8:00 AM - 9:00 PM</p>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2024 Cureiosity Clinic. All rights reserved.</p>
+                <p>Your health, our priority</p>
+            </div>
+        </footer>
+
+        <script>
+            const hamburger = document.getElementById("hamburger");
+            const navLinks = document.getElementById("nav-links");
+
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active");
+            });
+        </script>
+    </main>
+
+
+
+</body>
+
+</html>
